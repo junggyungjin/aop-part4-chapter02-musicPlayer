@@ -145,10 +145,10 @@ class PlayerFragment : Fragment(R.layout.fragment_player) {
 
         binding?.let { binding ->
             binding.playListSeekBar.max = (duration / 1000).toInt()
-            binding.playListSeekBar.progress = (position/10000).toInt()
+            binding.playListSeekBar.progress = (position/1000).toInt()
 
             binding.playerSeekBar.max = (duration / 1000).toInt()
-            binding.playerSeekBar.progress = (position/10000).toInt()
+            binding.playerSeekBar.progress = (position/1000).toInt()
 
             binding.playTimeTextView.text = String.format("%02d:%02d",
                 TimeUnit.MINUTES.convert(position, TimeUnit.MILLISECONDS),
